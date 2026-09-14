@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить студента</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <h1 id="form-title">Добавить студента</h1>
+    <nav class="site-nav">
+        <a href="index.html" class="btn btn-secondary">← К списку</a>
+    </nav>
+</header>
+
+<main class="container">
+    <div id="message"></div>
+
+    <form id="student-form" novalidate>
+        <div class="form-group">
+            <label for="fullName">ФИО</label>
+            <input type="text" id="fullName" name="fullName"
+                   required minlength="3" maxlength="100"
+                   placeholder="Иванов Иван Иванович">
+            <span class="field-error" data-error-for="fullName"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="group">Группа</label>
+            <input type="text" id="group" name="group"
+                   required minlength="4" maxlength="10"
+                   placeholder="P3215">
+            <span class="field-error" data-error-for="group"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="isuId">ИСУ ID</label>
+            <input type="text" id="isuId" name="isuId"
+                   required pattern="\d{6}"
+                   inputmode="numeric"
+                   placeholder="123456">
+            <span class="field-error" data-error-for="isuId"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="dormitory">Номер общежития</label>
+            <input type="number" id="dormitory" name="dormitory"
+                   required min="1" max="30"
+                   placeholder="6">
+            <span class="field-error" data-error-for="dormitory"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="room">Номер комнаты</label>
+            <input type="number" id="room" name="room"
+                   required min="1" max="9999"
+                   placeholder="412">
+            <span class="field-error" data-error-for="room"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="checkIn">Срок заселения</label>
+            <input type="date" id="checkIn" name="checkIn" required>
+            <span class="field-error" data-error-for="checkIn"></span>
+        </div>
+
+        <div class="form-group form-group-checkbox">
+            <input type="checkbox" id="isForeign" name="isForeign">
+            <label for="isForeign">Иностранный студент</label>
+        </div>
+
+        <div class="form-group">
+            <label for="notes">Заметки</label>
+            <textarea id="notes" name="notes" rows="4"
+                      maxlength="500"
+                      placeholder="Дополнительная информация"></textarea>
+            <span class="field-error" data-error-for="notes"></span>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-confirm" id="submit-btn">Добавить</button>
+            <a href="index.html" class="btn-cancel">Отмена</a>
+        </div>
+    </form>
+</main>
+
+<footer class="site-footer">
+    <p>Лабораторная работа №1 — Управление студентами</p>
+</footer>
+
+<script src="js/cookies.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

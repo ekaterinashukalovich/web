@@ -4,12 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Список студентов</title>
-    <link rel="icon" type="image/png" sizes="554x543" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
+<header class="site-header">
     <h1>Список студентов</h1>
+    <nav class="site-nav">
+        <a href="form.html" class="btn-confirm">Добавить студента</a>
+    </nav>
 </header>
+
+<main class="container">
+    <div id="message"></div>
+    <div id="table-container"></div>
+</main>
+
+<footer class="site-footer">
+    <p>Лабораторная работа №1 — Управление студентами</p>
+</footer>
+
+<script src="js/cookies.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
