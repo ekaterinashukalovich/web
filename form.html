@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="543x543" href="img/favicon.png">
+        <title></title>
+    </head>
+    <body>
+        <main>
+            <button class="btn btn-back" id="backBtn">← Назад</button>
+
+            <div class="form-container">
+                <h1 class="form-title" id="formTitle">Добавить студента</h1>
+
+                <form id="studentForm" novalidate>
+                    <div class="form-group">
+                        <label for="surname">Фамилия *</label>
+                        <input type="text" id="surname" name="surname" required minlength="2">
+                        <div class="error-message" id="surnameError">Введите фамилию</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Имя *</label>
+                        <input type="text" id="name" name="name" required minlength="2">
+                        <div class="error-message" id="nameError">Введите имя</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patronymic">Отчество</label>
+                        <input type="text" id="patronymic" name="patronymic">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="group">Учебная группа *</label>
+                        <input type="text" id="group" name="group" placeholder="R3221" required>
+                        <div class="error-message" id="groupError">Введите номер группы</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="isu">ИСУ ID *</label>
+                        <input type="text" id="isu" name="isu" placeholder="503299" pattern="[0-9]{6}" required>
+                        <div class="error-message" id="isuError">ИСУ ID должен содержать 6 цифр</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dormitory">Номер общежития *</label>
+                        <select id="dormitory" name="dormitory" required>
+                            <option value="">-- Выберите --</option>
+                            <option value="studcity">Студгородок</option>
+                            <option value="lensoveta">Ленсовета</option>
+                            <option value="alpiyka">Альпийка</option>
+                            <option value="belka">Белка</option>
+                            <option value="msg">МСГ</option>
+                            <option value="another">Другое</option>
+                        </select>
+                        <div class="error-message" id="dormitoryError">Выберите общежитие</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="roomnum">Номер комнаты</label>
+                        <input type="text" id="roomnum" name="roomnum">
+                        <div class="error-message" id="roomnumError">Номер комнаты должен быть числом</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Дата заселения</label>
+                        <input type="date" id="date" name="date">
+                        <div class="error-message" id="dateError">Неверная дата</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foreignstud">
+                            <input type="checkbox" id="foreignstud" name="foreignstud">
+                            Студент-иностранец
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Заметки</label>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-submit">Сохранить</button>
+                        <button type="button" class="btn btn-cancel" id="cancelBtn">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <script src="js/cookies.js" defer></script>
+        <script src="js/validation.js" defer></script>
+        <script src="js/app.js" defer></script>
+        <link rel="stylesheet" href="css/style.css">
+    </body>
+</html>
